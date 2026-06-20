@@ -44,15 +44,15 @@ Fraude financeira direta (transferência bancária fraudulenta, alteração de d
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>fraude reportada ou login anômalo] --> B[Coleta<br/>logs de auth + inbox rules + OAuth grants]
-    B --> C[Análise<br/>timeline de acesso + e-mails enviados/lidos]
+    A[Identificação<br/>fraude reportada ou<br/>login anômalo] --> B[Coleta<br/>logs de auth + inbox<br/>rules + OAuth grants]
+    B --> C[Análise<br/>timeline de acesso +<br/>e-mails enviados/lidos]
     C --> D{Fraude financeira<br/>em andamento?}
-    D -->|Sim| E[Contenção URGENTE<br/>contatar banco/financeiro]
+    D -->|Sim| E[Contenção URGENTE<br/>contatar<br/>banco/financeiro]
     D -->|Não| F[Contenção padrão]
-    E --> G[Erradicação<br/>remover regras + revogar acesso]
+    E --> G[Erradicação<br/>remover regras +<br/>revogar acesso]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>notificar afetados externos]
+    H --> I[Pós-Incidente<br/>notificar afetados<br/>externos]
 ```
 
 ### 2.1 Identificação

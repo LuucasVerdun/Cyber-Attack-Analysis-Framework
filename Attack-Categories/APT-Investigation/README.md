@@ -52,15 +52,15 @@ Acesso de longo prazo e furtivo para espionagem (roubo de propriedade intelectua
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>indicador de sofisticação/TTP de ator conhecido] --> B[Coleta ampla<br/>multi-host, multi-fonte, período estendido]
-    B --> C[Análise<br/>reconstrução de campanha completa]
+    A[Identificação<br/>indicador de<br/>sofisticação/TTP de<br/>ator conhecido] --> B[Coleta ampla<br/>multi-host,<br/>multi-fonte, período<br/>estendido]
+    B --> C[Análise<br/>reconstrução de<br/>campanha completa]
     C --> D{Operação ainda<br/>ativa?}
-    D -->|Sim| E[Contenção silenciosa<br/>monitorar antes de agir]
+    D -->|Sim| E[Contenção silenciosa<br/>monitorar antes de<br/>agir]
     D -->|Não/Histórica| F[Contenção direta]
-    E --> G[Erradicação coordenada<br/>ação simultânea em TODOS os pontos]
+    E --> G[Erradicação coordenada<br/>ação simultânea em<br/>TODOS os pontos]
     F --> G
     G --> H[Recuperação extensa<br/>validação prolongada]
-    H --> I[Pós-Incidente<br/>atribuição + hunting contínuo]
+    H --> I[Pós-Incidente<br/>atribuição + hunting<br/>contínuo]
 ```
 
 > ⚠️ Esta é a única categoria onde **agir rápido pode ser pior que agir devagar e com cautela**. Um ator de APT que perceba que foi detectado pode acelerar destruição de evidência, ativar mecanismos de persistência de backup, ou simplesmente desaparecer e retornar por outro caminho meses depois. A decisão de quando conter exige aprovação explícita do Incident Commander e, frequentemente, de liderança executiva.

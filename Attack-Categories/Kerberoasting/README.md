@@ -37,15 +37,15 @@ Obter credenciais de contas de serviço (frequentemente privilegiadas — contas
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>volume anômalo de TGS RC4] --> B[Coleta<br/>Event ID 4769 + origem]
-    B --> C[Análise<br/>quais SPNs foram visados]
+    A[Identificação<br/>volume anômalo de TGS<br/>RC4] --> B[Coleta<br/>Event ID 4769 + origem]
+    B --> C[Análise<br/>quais SPNs foram<br/>visados]
     C --> D{Conta de serviço<br/>privilegiada visada?}
-    D -->|Sim| E[Contenção urgente<br/>reset de senha da conta de serviço]
+    D -->|Sim| E[Contenção urgente<br/>reset de senha da<br/>conta de serviço]
     D -->|Não| F[Contenção padrão]
-    E --> G[Erradicação<br/>identificar origem da enumeração]
+    E --> G[Erradicação<br/>identificar origem da<br/>enumeração]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>política de senha forte para contas de serviço]
+    H --> I[Pós-Incidente<br/>política de senha<br/>forte para contas de<br/>serviço]
 ```
 
 ### 2.1 Identificação

@@ -10,7 +10,7 @@
 flowchart LR
     P[Preparação] --> D[Detecção e Análise]
     D --> C[Contenção, Erradicação<br/>e Recuperação]
-    C --> PI[Atividade Pós-Incidente]
+    C --> PI[Atividade<br/>Pós-Incidente]
     PI -.realimenta.-> P
 ```
 

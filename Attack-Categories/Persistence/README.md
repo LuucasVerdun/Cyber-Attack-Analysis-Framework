@@ -50,12 +50,12 @@ Garantir acesso de longo prazo ao ambiente, sobrevivendo a reboots, atualizaçõ
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>mecanismo de autostart anômalo detectado] --> B[Coleta<br/>varredura completa de TODOS os mecanismos conhecidos]
-    B --> C[Análise<br/>mapear cada mecanismo ao objetivo/payload]
-    C --> D[Contenção<br/>não remover ainda - documentar primeiro]
-    D --> E[Erradicação<br/>remover TODOS os mecanismos simultaneamente]
-    E --> F[Recuperação<br/>monitorar reaparecimento]
-    F --> G[Pós-Incidente<br/>hardening de autostart + auditoria]
+    A[Identificação<br/>mecanismo de autostart<br/>anômalo detectado] --> B[Coleta<br/>varredura completa de<br/>TODOS os mecanismos<br/>conhecidos]
+    B --> C[Análise<br/>mapear cada mecanismo<br/>ao objetivo/payload]
+    C --> D[Contenção<br/>não remover ainda -<br/>documentar primeiro]
+    D --> E[Erradicação<br/>remover TODOS os<br/>mecanismos<br/>simultaneamente]
+    E --> F[Recuperação<br/>monitorar<br/>reaparecimento]
+    F --> G[Pós-Incidente<br/>hardening de autostart<br/>+ auditoria]
 ```
 
 > ⚠️ Persistência raramente é um único mecanismo — atacantes sofisticados estabelecem **múltiplos** mecanismos redundantes. Remover apenas o primeiro encontrado e declarar vitória é o erro mais comum em erradicação malsucedida.

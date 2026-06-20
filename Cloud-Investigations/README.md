@@ -24,12 +24,12 @@ A maioria dos incidentes cloud começa com **credenciais comprometidas** (chave 
 
 ```mermaid
 flowchart TD
-    A[Alerta: atividade anômala de API] --> B[Identificar identidade<br/>usuário/role/service account]
-    B --> C[Reconstruir timeline de chamadas de API<br/>da identidade]
-    C --> D[Determinar origem<br/>IP, user-agent, MFA usado?]
-    D --> E[Mapear todos os recursos<br/>acessados/modificados]
-    E --> F[Avaliar blast radius<br/>o que mais essa identidade alcança]
-    F --> G[Conter: revogar credenciais/sessões,<br/>aplicar policy de quarentena]
+    A[Alerta: atividade<br/>anômala de API] --> B[Identificar identidade<br/>usuário/role/service<br/>account]
+    B --> C[Reconstruir timeline<br/>de chamadas de API da<br/>identidade]
+    C --> D[Determinar origem<br/>IP, user-agent, MFA<br/>usado?]
+    D --> E[Mapear todos os<br/>recursos<br/>acessados/modificados]
+    E --> F[Avaliar blast radius<br/>o que mais essa<br/>identidade alcança]
+    F --> G[Conter: revogar<br/>credenciais/sessões,<br/>aplicar policy de<br/>quarentena]
 ```
 
 ## Fontes de Log por Provedor

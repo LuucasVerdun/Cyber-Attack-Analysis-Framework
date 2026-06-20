@@ -14,7 +14,7 @@
 
 ```mermaid
 flowchart TD
-    A[Triagem inicial] --> B[Coleta de evidência viva<br/>memória, conexões, processos]
+    A[Triagem inicial] --> B[Coleta de evidência<br/>viva memória,<br/>conexões, processos]
     B --> C[Aquisição de disco<br/>se necessário]
     C --> D[Análise de timeline]
     D --> E[Correlação multi-fonte<br/>host + rede + cloud]

@@ -38,12 +38,12 @@ Movimento lateral usando credenciais já obtidas (geralmente via `Credential-Acc
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>logon NTLM anômalo Tipo 3] --> B[Coleta<br/>logs 4624/4625 + correlação com dumping prévio]
-    B --> C[Análise<br/>mapear cadeia de saltos hash-by-hash]
-    C --> D[Contenção<br/>isolar todos os hosts da cadeia]
-    D --> E[Erradicação<br/>reset de TODAS as contas usadas na cadeia]
+    A[Identificação<br/>logon NTLM anômalo<br/>Tipo 3] --> B[Coleta<br/>logs 4624/4625 +<br/>correlação com dumping<br/>prévio]
+    B --> C[Análise<br/>mapear cadeia de<br/>saltos hash-by-hash]
+    C --> D[Contenção<br/>isolar todos os hosts<br/>da cadeia]
+    D --> E[Erradicação<br/>reset de TODAS as<br/>contas usadas na<br/>cadeia]
     E --> F[Recuperação]
-    F --> G[Pós-Incidente<br/>restringir admin local + LAPS]
+    F --> G[Pós-Incidente<br/>restringir admin local<br/>+ LAPS]
 ```
 
 ### 2.1 Identificação

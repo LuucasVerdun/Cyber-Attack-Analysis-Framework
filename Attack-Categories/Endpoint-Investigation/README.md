@@ -14,10 +14,10 @@
 
 ```mermaid
 flowchart TD
-    A[Alerta/suspeita em endpoint] --> B[Coletar artefatos voláteis<br/>processos, conexões, memória se necessário]
-    B --> C[Identificar processo/atividade de origem]
+    A[Alerta/suspeita em<br/>endpoint] --> B[Coletar artefatos<br/>voláteis processos,<br/>conexões, memória se<br/>necessário]
+    B --> C[Identificar<br/>processo/atividade de<br/>origem]
     C --> D{Categoria<br/>identificável?}
-    D -->|Sim| E[Direcionar para playbook específico]
+    D -->|Sim| E[Direcionar para<br/>playbook específico]
     D -->|Não| F[Triagem ampliada<br/>ver checklist abaixo]
     F --> E
 ```

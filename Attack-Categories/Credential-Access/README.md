@@ -45,15 +45,15 @@ Obter credenciais válidas para escalonamento de privilégio, movimento lateral,
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>acesso anômalo a LSASS/SAM/NTDS] --> B[Coleta<br/>processo + memória + linha de comando]
-    B --> C[Análise<br/>qual credencial foi exposta? escopo?]
+    A[Identificação<br/>acesso anômalo a<br/>LSASS/SAM/NTDS] --> B[Coleta<br/>processo + memória +<br/>linha de comando]
+    B --> C[Análise<br/>qual credencial foi<br/>exposta? escopo?]
     C --> D{Credencial<br/>privilegiada exposta?}
-    D -->|Sim| E[Contenção crítica<br/>reset imediato + revogação Kerberos]
+    D -->|Sim| E[Contenção crítica<br/>reset imediato +<br/>revogação Kerberos]
     D -->|Não| F[Contenção padrão]
     E --> G[Erradicação]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>hardening de LSASS/credential guard]
+    H --> I[Pós-Incidente<br/>hardening de<br/>LSASS/credential guard]
 ```
 
 ### 2.1 Identificação

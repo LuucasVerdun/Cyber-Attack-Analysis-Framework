@@ -46,11 +46,11 @@ Acesso não autorizado a recursos cloud (compute, storage, dados), com objetivos
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>alerta de billing/login anômalo/CSPM] --> B[Coleta<br/>logs de API completos da identidade]
-    B --> C[Análise<br/>blast radius: o que essa identidade alcança]
-    C --> D[Contenção<br/>revogar credenciais + sessões]
-    D --> E[Erradicação<br/>remover recursos/policies criadas pelo atacante]
-    E --> F[Recuperação<br/>rotação ampla de credenciais]
+    A[Identificação<br/>alerta de<br/>billing/login<br/>anômalo/CSPM] --> B[Coleta<br/>logs de API completos<br/>da identidade]
+    B --> C[Análise<br/>blast radius: o que<br/>essa identidade<br/>alcança]
+    C --> D[Contenção<br/>revogar credenciais +<br/>sessões]
+    D --> E[Erradicação<br/>remover<br/>recursos/policies<br/>criadas pelo atacante]
+    E --> F[Recuperação<br/>rotação ampla de<br/>credenciais]
     F --> G[Pós-Incidente<br/>CSPM + least privilege]
 ```
 

@@ -16,13 +16,13 @@
 
 ```mermaid
 flowchart TD
-    A[IOC ou comportamento suspeito] --> B[Buscar em NetFlow/Zeek<br/>identificar primeira/última ocorrência]
-    B --> C[Identificar todos os hosts<br/>que se comunicaram com o IOC]
+    A[IOC ou comportamento<br/>suspeito] --> B[Buscar em NetFlow/Zeek<br/>identificar<br/>primeira/última<br/>ocorrência]
+    B --> C[Identificar todos os<br/>hosts que se<br/>comunicaram com o IOC]
     C --> D{PCAP disponível<br/>para o período?}
-    D -->|Sim| E[Extrair sessão completa<br/>analisar payload]
-    D -->|Não| F[Trabalhar com metadados<br/>de fluxo disponíveis]
-    E --> G[Reconstruir objeto/arquivo transferido]
-    F --> H[Documentar limitação de evidência]
+    D -->|Sim| E[Extrair sessão<br/>completa analisar<br/>payload]
+    D -->|Não| F[Trabalhar com<br/>metadados de fluxo<br/>disponíveis]
+    E --> G[Reconstruir<br/>objeto/arquivo<br/>transferido]
+    F --> H[Documentar limitação<br/>de evidência]
 ```
 
 ## O que Procurar por Tipo de Investigação

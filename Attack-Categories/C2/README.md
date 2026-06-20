@@ -45,12 +45,12 @@ Manter controle remoto persistente e furtivo sobre o(s) host(s) comprometido(s),
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>beaconing detectado] --> B[Coleta<br/>NetFlow/Zeek + memória do host]
-    B --> C[Análise<br/>identificar framework + extrair config de C2]
-    C --> D[Contenção<br/>bloquear IOC em escala + isolar host]
-    D --> E[Erradicação<br/>remover implante + persistência associada]
+    A[Identificação<br/>beaconing detectado] --> B[Coleta<br/>NetFlow/Zeek + memória<br/>do host]
+    B --> C[Análise<br/>identificar framework<br/>+ extrair config de C2]
+    C --> D[Contenção<br/>bloquear IOC em escala<br/>+ isolar host]
+    D --> E[Erradicação<br/>remover implante +<br/>persistência associada]
     E --> F[Recuperação]
-    F --> G[Pós-Incidente<br/>regra de detecção de beaconing]
+    F --> G[Pós-Incidente<br/>regra de detecção de<br/>beaconing]
 ```
 
 ### 2.1 Identificação

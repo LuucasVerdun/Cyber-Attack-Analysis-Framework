@@ -41,15 +41,15 @@ Acesso inicial a um alvo específico de alto valor (executivo, administrador de 
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>relato do alvo / detecção de payload customizado] --> B[Coleta<br/>e-mail + payload + contexto de reconhecimento]
-    B --> C[Análise<br/>atribuição + nível de customização + payload]
+    A[Identificação<br/>relato do alvo /<br/>detecção de payload<br/>customizado] --> B[Coleta<br/>e-mail + payload +<br/>contexto de<br/>reconhecimento]
+    B --> C[Análise<br/>atribuição + nível de<br/>customização + payload]
     C --> D{Alvo de alto valor<br/>executou/clicou?}
-    D -->|Sim| E[Contenção prioritária<br/>tratar como possível APT]
-    D -->|Não| F[Bloqueio + hunting por variantes]
+    D -->|Sim| E[Contenção prioritária<br/>tratar como possível<br/>APT]
+    D -->|Não| F[Bloqueio + hunting por<br/>variantes]
     E --> G[Erradicação]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>avaliar se é campanha direcionada contínua]
+    H --> I[Pós-Incidente<br/>avaliar se é campanha<br/>direcionada contínua]
 ```
 
 ### 2.1 Identificação

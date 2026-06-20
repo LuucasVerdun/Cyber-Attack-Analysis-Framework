@@ -46,15 +46,15 @@ Roubo de dados sensíveis (financeiros, PII, propriedade intelectual, credenciai
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>pico de upload/uso de ferramenta de sync] --> B[Coleta<br/>NetFlow/proxy + logs de acesso a arquivo]
-    B --> C[Análise<br/>o que foi acessado e o que efetivamente saiu]
+    A[Identificação<br/>pico de upload/uso de<br/>ferramenta de sync] --> B[Coleta<br/>NetFlow/proxy + logs<br/>de acesso a arquivo]
+    B --> C[Análise<br/>o que foi acessado e o<br/>que efetivamente saiu]
     C --> D{Dados pessoais/<br/>sensíveis confirmados?}
-    D -->|Sim| E[Contenção + acionar jurídico<br/>avaliar obrigação de notificação]
+    D -->|Sim| E[Contenção + acionar<br/>jurídico avaliar<br/>obrigação de<br/>notificação]
     D -->|Não| F[Contenção padrão]
     E --> G[Erradicação]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>DLP + classificação de dados]
+    H --> I[Pós-Incidente<br/>DLP + classificação de<br/>dados]
 ```
 
 ### 2.1 Identificação

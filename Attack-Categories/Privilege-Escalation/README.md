@@ -44,15 +44,15 @@ Obter controle administrativo suficiente para desabilitar defesas, acessar dados
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>token elevado anômalo / mudança de grupo] --> B[Coleta<br/>processo + evento de mudança de privilégio]
-    B --> C[Análise<br/>método de escalonamento + nível alcançado]
+    A[Identificação<br/>token elevado anômalo<br/>/ mudança de grupo] --> B[Coleta<br/>processo + evento de<br/>mudança de privilégio]
+    B --> C[Análise<br/>método de<br/>escalonamento + nível<br/>alcançado]
     C --> D{Privilégio Tier 0<br/>alcançado?}
-    D -->|Sim| E[Contenção crítica<br/>tratar como comprometimento de domínio/tenant]
-    D -->|Não| F[Contenção padrão do host]
+    D -->|Sim| E[Contenção crítica<br/>tratar como<br/>comprometimento de<br/>domínio/tenant]
+    D -->|Não| F[Contenção padrão do<br/>host]
     E --> G[Erradicação]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>hardening de configuração]
+    H --> I[Pós-Incidente<br/>hardening de<br/>configuração]
 ```
 
 ### 2.1 Identificação

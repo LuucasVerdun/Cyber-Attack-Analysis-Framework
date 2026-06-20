@@ -44,12 +44,12 @@ Controle total sobre a floresta/domínio AD — de onde deriva acesso irrestrito
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>DCSync/Golden Ticket/admin anômalo] --> B[Coleta<br/>logs de TODOS os DCs + estado de AD]
-    B --> C[Análise<br/>determinar escopo: quando o domínio foi comprometido]
-    C --> D[Contenção<br/>NÃO resetar krbtgt ainda - planejar primeiro]
-    D --> E[Erradicação<br/>procedimento formal de AD recovery]
-    E --> F[Recuperação<br/>reset krbtgt 2x + validação extensa]
-    F --> G[Pós-Incidente<br/>Tiering Model + hardening de AD]
+    A[Identificação<br/>DCSync/Golden<br/>Ticket/admin anômalo] --> B[Coleta<br/>logs de TODOS os DCs +<br/>estado de AD]
+    B --> C[Análise<br/>determinar escopo:<br/>quando o domínio foi<br/>comprometido]
+    C --> D[Contenção<br/>NÃO resetar krbtgt<br/>ainda - planejar<br/>primeiro]
+    D --> E[Erradicação<br/>procedimento formal de<br/>AD recovery]
+    E --> F[Recuperação<br/>reset krbtgt 2x +<br/>validação extensa]
+    F --> G[Pós-Incidente<br/>Tiering Model +<br/>hardening de AD]
 ```
 
 > ⚠️ Comprometimento confirmado de Active Directory exige **planejamento cuidadoso** antes de qualquer ação de remediação. Reset de krbtgt sem preparação adequada pode causar outage massivo (todos os tickets Kerberos do domínio são invalidados simultaneamente).

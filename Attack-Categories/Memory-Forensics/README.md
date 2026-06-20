@@ -32,10 +32,10 @@
 ```mermaid
 flowchart TD
     A[Captura de memória] --> B[Verificação de hash]
-    B --> C[pslist/psscan<br/>processos visíveis vs ocultos]
+    B --> C[pslist/psscan<br/>processos visíveis vs<br/>ocultos]
     C --> D[malfind<br/>injeção de processo]
     D --> E[netscan<br/>conexões ativas]
-    E --> F[Extração de artefato específico<br/>config de C2, credencial, chave]
+    E --> F[Extração de artefato<br/>específico config de<br/>C2, credencial, chave]
 ```
 
 ---

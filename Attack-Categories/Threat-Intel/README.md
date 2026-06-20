@@ -16,12 +16,12 @@
 
 ```mermaid
 flowchart TD
-    A[Alerta de match de IOC/TI] --> B[Avaliar confiança e contexto da fonte]
+    A[Alerta de match de<br/>IOC/TI] --> B[Avaliar confiança e<br/>contexto da fonte]
     B --> C{Confiança suficiente<br/>para ação?}
-    C -->|Baixa| D[Monitorar / IOC sweep adicional]
-    C -->|Alta| E[Tratar como detecção confirmada]
-    E --> F[Identificar categoria de ataque correspondente]
-    F --> G[Seguir playbook de Attack-Categories/ apropriado]
+    C -->|Baixa| D[Monitorar / IOC sweep<br/>adicional]
+    C -->|Alta| E[Tratar como detecção<br/>confirmada]
+    E --> F[Identificar categoria<br/>de ataque<br/>correspondente]
+    F --> G[Seguir playbook de<br/>Attack-Categories/<br/>apropriado]
 ```
 
 ### 1. Avaliação de Confiança da Fonte

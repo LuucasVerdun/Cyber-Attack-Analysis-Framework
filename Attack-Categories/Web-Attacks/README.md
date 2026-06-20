@@ -8,12 +8,12 @@ Esta categoria cobre ataques contra aplicações web — o vetor de acesso inici
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>WAF/alerta de aplicação] --> B[Coleta<br/>logs de aplicação + WAF + request completo]
-    B --> C[Análise<br/>payload + impacto + dados acessados]
-    C --> D[Contenção<br/>WAF rule + bloqueio de origem]
-    D --> E[Erradicação<br/>patch da vulnerabilidade]
+    A[Identificação<br/>WAF/alerta de<br/>aplicação] --> B[Coleta<br/>logs de aplicação +<br/>WAF + request completo]
+    B --> C[Análise<br/>payload + impacto +<br/>dados acessados]
+    C --> D[Contenção<br/>WAF rule + bloqueio de<br/>origem]
+    D --> E[Erradicação<br/>patch da<br/>vulnerabilidade]
     E --> F[Recuperação]
-    F --> G[Pós-Incidente<br/>code review + SAST/DAST]
+    F --> G[Pós-Incidente<br/>code review +<br/>SAST/DAST]
 ```
 
 ## Subcategorias

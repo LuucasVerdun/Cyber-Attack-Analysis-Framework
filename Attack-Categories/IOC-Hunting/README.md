@@ -14,12 +14,12 @@
 
 ```mermaid
 flowchart TD
-    A[Novo IOC recebido] --> B[Classificar tipo: hash/domínio/IP/etc.]
-    B --> C[Determinar fontes de dados a varrer]
-    C --> D[Executar busca retroativa<br/>em todo o histórico disponível]
+    A[Novo IOC recebido] --> B[Classificar tipo:<br/>hash/domínio/IP/etc.]
+    B --> C[Determinar fontes de<br/>dados a varrer]
+    C --> D[Executar busca<br/>retroativa em todo o<br/>histórico disponível]
     D --> E{Match encontrado?}
-    E -->|Sim| F[Escalar para investigação completa]
-    E -->|Não| G[Registrar IOC para detecção futura<br/>watchlist/SIEM rule]
+    E -->|Sim| F[Escalar para<br/>investigação completa]
+    E -->|Não| G[Registrar IOC para<br/>detecção futura<br/>watchlist/SIEM rule]
 ```
 
 ## Onde Buscar por Tipo de IOC

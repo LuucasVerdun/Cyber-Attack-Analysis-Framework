@@ -14,12 +14,12 @@
 
 ```mermaid
 flowchart LR
-    A[Fonte de hipótese<br/>TI, MITRE, lacuna de detecção] --> B[Formular hipótese]
-    B --> C[Definir dados necessários]
+    A[Fonte de hipótese<br/>TI, MITRE, lacuna de<br/>detecção] --> B[Formular hipótese]
+    B --> C[Definir dados<br/>necessários]
     C --> D[Executar busca]
     D --> E{Encontrado?}
-    E -->|Sim| F[Escalar para investigação<br/>via playbook da categoria]
-    E -->|Não| G[Documentar resultado negativo<br/>refinar cobertura de detecção]
+    E -->|Sim| F[Escalar para<br/>investigação via<br/>playbook da categoria]
+    E -->|Não| G[Documentar resultado<br/>negativo refinar<br/>cobertura de detecção]
 ```
 
 ### Fontes de Hipótese

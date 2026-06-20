@@ -14,12 +14,12 @@
 
 ```mermaid
 flowchart TD
-    A[Alerta de rede<br/>IDS/Proxy/Firewall] --> B[Identificar host(s) interno(s) envolvido(s)]
-    B --> C[Classificar tipo de tráfego suspeito]
+    A[Alerta de rede<br/>IDS/Proxy/Firewall] --> B[Identificar host(s)<br/>interno(s)<br/>envolvido(s)]
+    B --> C[Classificar tipo de<br/>tráfego suspeito]
     C --> D{Tipo identificado?}
     D -->|C2/Beaconing| E[Direcionar para C2/]
-    D -->|Exfiltração| F[Direcionar para Data-Exfiltration/]
-    D -->|Movimento Lateral| G[Direcionar para Lateral-Movement/]
+    D -->|Exfiltração| F[Direcionar para<br/>Data-Exfiltration/]
+    D -->|Movimento Lateral| G[Direcionar para<br/>Lateral-Movement/]
     D -->|DDoS/Volume| H[Direcionar para DDoS/]
     D -->|Não claro| I[Triagem ampliada -<br/>ver checklist abaixo]
 ```

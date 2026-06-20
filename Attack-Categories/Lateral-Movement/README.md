@@ -44,12 +44,12 @@ Expandir o escopo de acesso a partir de um ponto de entrada inicial, geralmente 
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>conexão administrativa anômala entre hosts] --> B[Coleta<br/>logs de logon + conexão de rede + execução]
-    B --> C[Análise<br/>mapear grafo de movimento: quem→quem→quando]
-    C --> D[Contenção<br/>isolar TODOS os nós do grafo]
-    D --> E[Erradicação<br/>persistência em cada host + reset de contas]
+    A[Identificação<br/>conexão administrativa<br/>anômala entre hosts] --> B[Coleta<br/>logs de logon +<br/>conexão de rede +<br/>execução]
+    B --> C[Análise<br/>mapear grafo de<br/>movimento:<br/>quem→quem→quando]
+    C --> D[Contenção<br/>isolar TODOS os nós do<br/>grafo]
+    D --> E[Erradicação<br/>persistência em cada<br/>host + reset de contas]
     E --> F[Recuperação]
-    F --> G[Pós-Incidente<br/>segmentação de rede + Tiering]
+    F --> G[Pós-Incidente<br/>segmentação de rede +<br/>Tiering]
 ```
 
 ### 2.1 Identificação

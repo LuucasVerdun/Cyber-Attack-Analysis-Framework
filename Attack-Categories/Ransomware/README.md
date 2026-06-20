@@ -48,12 +48,12 @@ Monetização direta via resgate; secundariamente, extorsão via ameaça de vaza
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>arquivos criptografados / nota de resgate] --> B[Coleta<br/>amostra do payload + memória + nota]
-    B --> C[Análise<br/>identificar família + reconstruir timeline completa]
-    C --> D[Contenção<br/>isolar TODOS os hosts afetados/em risco]
-    D --> E[Erradicação<br/>remover persistência em toda a rede]
-    E --> F[Recuperação<br/>restaurar de backup validado]
-    F --> G[Pós-Incidente<br/>causa raiz + comunicação regulatória]
+    A[Identificação<br/>arquivos<br/>criptografados / nota<br/>de resgate] --> B[Coleta<br/>amostra do payload +<br/>memória + nota]
+    B --> C[Análise<br/>identificar família +<br/>reconstruir timeline<br/>completa]
+    C --> D[Contenção<br/>isolar TODOS os hosts<br/>afetados/em risco]
+    D --> E[Erradicação<br/>remover persistência<br/>em toda a rede]
+    E --> F[Recuperação<br/>restaurar de backup<br/>validado]
+    F --> G[Pós-Incidente<br/>causa raiz +<br/>comunicação<br/>regulatória]
 ```
 
 > ⚠️ Diferente de outras categorias, em ransomware a **contenção precede a análise completa** sempre que houver criptografia ativa — o custo de esperar é a perda de mais dados.

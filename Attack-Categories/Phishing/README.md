@@ -43,15 +43,15 @@ Acesso inicial (via credenciais ou execução de payload), distribuição de mal
 
 ```mermaid
 flowchart TD
-    A[Identificação<br/>report do usuário / sandbox de e-mail] --> B[Coleta<br/>headers + anexo/link + lista de destinatários]
-    B --> C[Análise<br/>infraestrutura + payload + quem clicou]
+    A[Identificação<br/>report do usuário /<br/>sandbox de e-mail] --> B[Coleta<br/>headers + anexo/link +<br/>lista de destinatários]
+    B --> C[Análise<br/>infraestrutura +<br/>payload + quem clicou]
     C --> D{Clique ou<br/>credencial inserida?}
-    D -->|Sim| E[Contenção<br/>reset de senha + revogação de sessão]
-    D -->|Não| F[Bloqueio preventivo de IOC]
-    E --> G[Erradicação<br/>remover e-mail de todas as caixas]
+    D -->|Sim| E[Contenção<br/>reset de senha +<br/>revogação de sessão]
+    D -->|Não| F[Bloqueio preventivo de<br/>IOC]
+    E --> G[Erradicação<br/>remover e-mail de<br/>todas as caixas]
     F --> G
     G --> H[Recuperação]
-    H --> I[Pós-Incidente<br/>regra de detecção + treinamento]
+    H --> I[Pós-Incidente<br/>regra de detecção +<br/>treinamento]
 ```
 
 ### 2.1 Identificação

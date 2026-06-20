@@ -37,11 +37,11 @@ Antes de avaliar qualquer atividade como "anômala", estabelecer o que é normal
 
 ```mermaid
 flowchart TD
-    A[Indivíduo identificado<br/>como foco de investigação] --> B[Estabelecer baseline de atividade normal]
-    B --> C[Coletar logs de acesso<br/>arquivo, e-mail, USB, VPN]
-    C --> D[Comparar atividade recente vs. baseline]
-    D --> E[Documentar evidência com cadeia de custódia]
-    E --> F[Reportar achados para RH/Jurídico<br/>decisão de ação é deles, não do analista técnico]
+    A[Indivíduo identificado<br/>como foco de<br/>investigação] --> B[Estabelecer baseline<br/>de atividade normal]
+    B --> C[Coletar logs de acesso<br/>arquivo, e-mail, USB,<br/>VPN]
+    C --> D[Comparar atividade<br/>recente vs. baseline]
+    D --> E[Documentar evidência<br/>com cadeia de custódia]
+    E --> F[Reportar achados para<br/>RH/Jurídico decisão de<br/>ação é deles, não do<br/>analista técnico]
 ```
 
 ---
