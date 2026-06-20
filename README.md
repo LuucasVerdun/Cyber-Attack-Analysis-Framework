@@ -191,6 +191,7 @@ Ver convenções de nomenclatura em [`Detection-Rules/README.md`](Detection-Rule
 
 | Template | Uso |
 |---|---|
+| [Investigation-Template.md](Templates/Investigation-Template.md) | **Documento único de trabalho para uso diário** — do primeiro alerta ao encerramento do caso |
 | [IR-Report-Template.md](Templates/IR-Report-Template.md) | Relatório final de incidente (executivo + técnico) |
 | [Timeline-Template.md](Templates/Timeline-Template.md) | Linha do tempo forense do incidente |
 | [Evidence-Collection-Template.md](Templates/Evidence-Collection-Template.md) | Registro de coleta com cadeia de custódia |
