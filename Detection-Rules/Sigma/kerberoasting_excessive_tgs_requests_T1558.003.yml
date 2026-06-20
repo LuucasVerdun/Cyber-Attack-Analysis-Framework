@@ -1,0 +1,32 @@
+title: Possível Kerberoasting - Requisições TGS Excessivas com Criptografia RC4
+id: 6f7a8b1c-2d3e-4f5a-9b6c-7d8e9f0a1b2c
+status: experimental
+description: |
+    Detecta um volume anômalo de requisições de Service Ticket (TGS) usando
+    criptografia RC4 (etype 0x17) feitas por uma única conta em curto espaço de
+    tempo — padrão característico de ferramentas de Kerberoasting como
+    Rubeus e Impacket's GetUserSPNs.py, que enumeram contas de serviço (SPNs)
+    para extrair hashes de tickets offline.
+references:
+    - ../../Attack-Categories/Kerberoasting/README.md
+author: Cyber Attack Analysis Framework
+date: 2026-06-19
+tags:
+    - attack.credential_access
+    - attack.t1558.003
+logsource:
+    product: windows
+    service: security
+    definition: 'Requer auditoria habilitada para "Audit Kerberos Service Ticket Operations" (Event ID 4769)'
+detection:
+    selection:
+        EventID: 4769
+        TicketEncryptionType: '0x17'
+    filter_machine_accounts:
+        ServiceName|endswith: '$'
+    timeframe: 10m
+    condition: selection and not filter_machine_accounts | count(ServiceName) by ClientAddress > 15
+falsepositives:
+    - Ferramentas legítimas de inventário/auditoria de SPN
+    - Scripts de administração que iteram sobre múltiplos serviços
+level: high

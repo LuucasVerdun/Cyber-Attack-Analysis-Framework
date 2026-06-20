@@ -1,0 +1,37 @@
+title: Comportamento de Ransomware - Modificação em Massa de Arquivos com Nota de Resgate
+id: 9a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: |
+    Detecta padrão comportamental de ransomware: alto volume de operações de
+    renomeação/escrita de arquivo em curto intervalo de tempo, seguido pela
+    criação de arquivos de texto com nomes característicos de nota de resgate
+    (ex.: README, DECRYPT, RESTORE) em múltiplos diretórios.
+references:
+    - ../../Attack-Categories/Ransomware/README.md
+author: Cyber Attack Analysis Framework
+date: 2026-06-19
+tags:
+    - attack.impact
+    - attack.t1486
+logsource:
+    product: windows
+    category: file_event
+    definition: 'Requer Sysmon Event ID 11 (FileCreate) e/ou EDR com telemetria de arquivo'
+detection:
+    selection_mass_rename:
+        EventID: 11
+        TargetFilename|re: '.*\.(locked|encrypted|enc|lockbit|crypt)$'
+    selection_ransom_note:
+        EventID: 11
+        TargetFilename|contains:
+            - 'README'
+            - 'DECRYPT'
+            - 'RESTORE'
+            - 'HOW_TO'
+            - 'RECOVER'
+    timeframe: 5m
+    condition: (selection_mass_rename | count() by Image > 50) or (selection_ransom_note | count() by Image > 3)
+falsepositives:
+    - Ferramentas legítimas de compressão/backup que renomeiam em massa
+    - Software de criptografia de disco autorizado (BitLocker, etc. — validar Image/processo)
+level: critical

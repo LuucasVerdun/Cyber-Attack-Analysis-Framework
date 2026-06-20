@@ -1,0 +1,18 @@
+# categoria: C2 | mitre: T1071.004 | ref: ../../Attack-Categories/C2/README.md
+#
+# Detecta possível DNS tunneling: queries com subdomínios anormalmente longos
+# e alta entropia, característicos de ferramentas de C2 sobre DNS (ex.: dnscat2,
+# Cobalt Strike DNS beacon, iodine).
+
+alert dns $HOME_NET any -> any 53 (msg:"C2 - Possível DNS Tunneling (subdominio longo/alta entropia)"; \
+    dns.query; content:"."; pcre:"/^([a-zA-Z0-9+\/=]{50,}\.)+[a-zA-Z]{2,}$/"; \
+    classtype:command-and-control; \
+    reference:url,attack.mitre.org/techniques/T1071/004/; \
+    sid:9000001; rev:1;)
+
+alert dns $HOME_NET any -> any 53 (msg:"C2 - Volume Anômalo de Queries TXT/NULL (possível DNS C2)"; \
+    dns.query; dns.opcode:0; \
+    threshold: type both, track by_src, count 100, seconds 60; \
+    classtype:command-and-control; \
+    reference:url,attack.mitre.org/techniques/T1071/004/; \
+    sid:9000002; rev:1;)
